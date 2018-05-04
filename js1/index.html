@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>九宫格变色</title>
+		<link rel="stylesheet" href="../css/reset.css" />
+		<style type="text/css">
+			.nine{
+				padding-top: 10px;
+				margin: 0 10px;
+				overflow: hidden;
+			}
+			.nine ul{
+				overflow: hidden;
+				margin-right: -3.33%;
+			}
+			.nine li{
+				float: left;
+				width: 30%;
+				margin-right: 3.33%;
+				margin-bottom: 3.33%;
+				padding-bottom: 30%;
+				background-color: orange;
+			}
+			.btns{
+				margin: 0 10px;
+			}
+			.btns li{
+				margin-bottom: 10px;
+			}
+			.btns a{
+				display: block;
+				color: #FFA500;
+				height: 40px;
+				line-height: 40px;
+				font-size: 20px;
+				text-align: center;
+				border: 1px solid #FFA500;
+			}
+			.btns a:hover{
+				color: #fff;
+				background-color: #FFA500;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="layout">
+			<div class="nine" >
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<div class="btns">
+				<ul>
+					<li><a href="javascript:void(0)" id="beginChange">开始闪</a></li>
+					<li><a href="javascript:void(0)" id="stopChange">结束闪</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			
+			var nine = document.getElementsByClassName("nine")[0];
+			var lis = nine.getElementsByTagName("li");
+			var t;
+			
+			document.getElementById("beginChange").addEventListener("click",function(event){
+				clearInterval(t);
+				t=setInterval("change()",1000);
+			});
+			
+			document.getElementById("stopChange").addEventListener("click",function(event){
+				window.clearInterval(t);
+				oriColor();
+			});
+			
+			//定时随机变色
+			function change(){
+				oriColor();
+				var arr= [];
+				var colorArr = [];
+				colorRandom(colorArr);
+				liRandom(arr);
+				for(var i=0;i<3;i++){
+					var j=arr[i];
+					lis[j].style.backgroundColor = colorArr[i];
+				}
+			}
+			//结束变色，恢复原色
+			function oriColor(){
+				for(var i=0;i<lis.length;i++){
+					lis[i].style.backgroundColor = "orange";
+				}
+			}
+			
+			//获取含三个随机li的数组
+			function liRandom(arr){
+				for(var i=0;i<=arr.length;i++){
+					if(arr.length >= 3){
+						break;
+					}
+					var randomNum = Math.floor(Math.random()*9);
+					if(!inArray(arr,randomNum)){
+						arr.push(randomNum);
+					}
+					//如果已存在数组里，则要加多循环一次
+					if(inArray(arr,randomNum)){
+						i--;
+					}
+				}
+				return arr;
+			}
+			
+			//获取三个随机颜色
+			function colorRandom(colorArr){
+				for(var i=0;i<=colorArr.length;i++){
+					if(colorArr.length >= 3){
+						break;
+					}
+					if(!inArray(colorArr,color())){
+						colorArr.push(color());
+					}
+					//如果已存在数组里，则要加多循环一次
+					if(inArray(colorArr,color())){
+						i--;
+					}
+				}
+				return colorArr;
+			}
+
+			//判断是否在数组里已有
+			function inArray(arr,num){
+				for(var i=0;i<arr.length;i++){
+					if(num == arr[i]){
+						return true;
+					}
+				}
+				return false;
+			}
+			
+			//随机颜色
+			function color(){
+				var r = Math.floor(Math.random()*256);
+				var g = Math.floor(Math.random()*256);
+				var b = Math.floor(Math.random()*256);
+				return "rgb("+r+","+g+","+b+")";
+			}
+			
+			//判断颜色是否已有
+			function inColor(colorArr,color){
+				for(var i=0;i<colorArr.length;i++){
+					if(color == colorArr[i]){
+						return true;
+					}
+				}
+				return false;
+			}
+		</script>
+	</body>
+</html>
