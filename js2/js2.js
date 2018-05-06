@@ -1,7 +1,7 @@
 //首页(点击选择简化版)
 if(document.getElementById("simpleGame")){
 	document.getElementById("simpleGame").onclick = function(){
-		window.location.href = "../js2/设置页面.html";
+		window.location.href = "设置页面.html";
 	}
 }
 	
@@ -20,19 +20,19 @@ if(document.getElementById("deal")){
 		}else if(playerNum>=4 && playerNum<=8){
 			killer = 1;
 			civilian = playerNum - killer;
-			window.location.href = "../js2/翻牌.html";
+			window.location.href = "翻牌.html";
 		}else if(playerNum>=9 && playerNum<=11){
 			killer = 2;
 			civilian = playerNum - killer;
-			window.location.href = "../js2/翻牌.html";
+			window.location.href = "翻牌.html";
 		}else if(playerNum>=12 && playerNum<=15){
 			killer = 3;
 			civilian = playerNum - killer;
-			window.location.href = "../js2/翻牌.html";
+			window.location.href = "翻牌.html";
 		}else if(playerNum>=16 && playerNum<=18){
 			killer = 4;
 			civilian = playerNum - killer;
-			window.location.href = "../js2/翻牌.html";
+			window.location.href = "翻牌.html";
 		}else{
 			alert("游戏人数超出！");
 		}
