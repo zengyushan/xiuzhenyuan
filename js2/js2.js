@@ -46,20 +46,20 @@ if(document.getElementById("setpage-matching_edit")){
 		}
 		
 		//对所有玩家进行乱序
-//		randomAllPlayers = shuffle(allplayers);
+		randomAllPlayers = shuffle(allplayers);
 		
 		var txt = "";
-		for(var i = 0;i < allplayers.length;i++){
+		for(var i = 0;i < randomAllPlayers.length;i++){
 			
-			if(allplayers[i] == "civilian"){
+			if(randomAllPlayers[i] == "civilian"){
 				txt += "<li class='col1'>平民1人</li>";
 			}
-			if(allplayers[i] == "killer"){
+			if(randomAllPlayers[i] == "killer"){
 				txt += "<li class='col2'>杀手1人</li>";
 			}
 		}
 		setpage_matching_players_ul.innerHTML = txt;
-		allPlayers = allplayers;
+		allPlayers = randomAllPlayers;
 		return false;
 	}
 }
@@ -67,17 +67,32 @@ if(document.getElementById("setpage-matching_edit")){
 
 //设置页面(点击去发牌)
 if(document.getElementById("deal")){
+	var setpage_matching_players_ul = document.getElementById("setpage-matching_players_ul");
 	var deal = document.getElementById("deal");
 	//点击发牌按钮
 	deal.onclick = function(){
 		//对所有玩家进行乱序
-		var randomAllPlayers = shuffle(allPlayers);
-		console.log(randomAllPlayers);
-		if(randomAllPlayers.length == 0){
+//		var randomAllPlayers = shuffle(allPlayers);
+		
+//		var txt = "";
+//		for(var i = 0;i < randomAllPlayers.length;i++){
+//			
+//			if(randomAllPlayers[i] == "civilian"){
+//				txt += "<li class='col1'>平民1人</li>";
+//			}
+//			if(randomAllPlayers[i] == "killer"){
+//				txt += "<li class='col2'>杀手1人</li>";
+//			}
+//		}
+//		
+//		setpage_matching_players_ul.innerHTML = txt;
+//		console.log(randomAllPlayers);
+		if(allPlayers.length == 0){
 			alert("还未分配玩家！");
-		}else if(randomAllPlayers.length > 0){
-			alert(randomAllPlayers);
-			window.location.href = "翻牌.html";
+		}else if(allPlayers.length > 0){
+//			alert("玩家配比处已随机分配！");
+//			setTimeout("window.location.href='翻牌.html?randomAllPlayers="+randomAllPlayers+"&pNum="+1+"'",3000);
+			window.location.href = "翻牌.html"+"?"+"randomAllPlayers="+allPlayers+"&pNum="+1;
 		}
 	}
 }
@@ -146,4 +161,15 @@ if(document.getElementById("header-menu")){
 
 		return false;
 	}
+}
+
+
+
+
+//获取url中的参数对应的值
+function getUrl(href){
+	var reg = new RegExp("(^|&)"+ href +"=([^&]*)(&|$)");
+	var r = window.location.search.substr(1).match(reg);
+	//unescape解码
+	if(r!=null)return unescape(r[2]); return null;
 }

@@ -23,13 +23,42 @@
 					<div class="draw-card_img">
 						<img src="../imgs/zys10.jpg"/>
 					</div>
-					<span>3</span>
+					<span id="identityNum"></span>
 				</div>
 				<div class="draw-btn">
-					<a href="#">查看3号身份</a>
+					<a href="#">查看<font id="checkIdentityNum"></font>号身份</a>
 				</div>
 			</div>
 		</div>
 		<script src="../js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				var pIdentity = "";
+				//点击发牌后，在身份页面获取js传递过来的身份信息
+				if(getUrl("randomAllPlayers") != null){
+					var passRandomAllPlayers = getUrl("randomAllPlayers").split(",");
+					if(getUrl("pNum")){
+						//将获取的当前序号显示在页面上
+						$("#identityNum").text(getUrl("pNum"));
+						$("#checkIdentityNum").text(getUrl("pNum"));
+						//当前是杀手还是平民
+						pIdentity = passRandomAllPlayers[parseInt(getUrl("pNum"))-1];
+					}
+//					console.log(passRandomAllPlayers[0]);
+				}	
+				
+				//查看身份
+				$(".draw-btn a").on("click",function(){
+					if(pIdentity == "civilian"){
+						window.location.href = "翻牌平民.html"+"?"+"randomAllPlayers="+passRandomAllPlayers+"&pNum="+getUrl("pNum");
+						console.log();
+					}else{
+						window.location.href = "翻牌杀手.html"+"?"+"randomAllPlayers="+passRandomAllPlayers+"&pNum="+getUrl("pNum");
+					}
+					
+				})
+			})
+		</script>
 	</body>
 </html>

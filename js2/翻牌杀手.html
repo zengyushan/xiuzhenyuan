@@ -24,13 +24,37 @@
 						<img src="../imgs/zys18.png"/>
 						<h4>杀手</h4>
 					</div>
-					<span>3</span>
+					<span id="identityNum"></span>
 				</div>
 				<div class="draw-btn">
-					<a href="#">隐藏并传递给2号</a>
+					<a href="#">隐藏并传递给<font id="nextIdentityNum">2</font>号</a>
 				</div>
 			</div>
 		</div>
 		<script src="../js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				var pIdentity = "";
+				//获取玩家们的身份信息数组
+				if(getUrl("randomAllPlayers") != null){
+					var passRandomAllPlayers = getUrl("randomAllPlayers").split(",");
+					if(getUrl("pNum")){
+						//将获取的当前序号显示在页面上
+						$("#identityNum").text(getUrl("pNum"));
+						$("#nextIdentityNum").text(parseInt(getUrl("pNum"))+1);
+						pIdentity = passRandomAllPlayers[parseInt(getUrl("pNum"))-1];
+						
+						//如果是最后一号玩家了，传递给法官
+					}
+				}	
+				
+				//传给下一号
+				$(".draw-btn a").on("click",function(){
+					var nextNum = parseInt(getUrl("pNum"))+1;
+					window.location.href = "翻牌.html"+"?"+"randomAllPlayers="+passRandomAllPlayers+"&pNum="+nextNum;
+				})
+			})
+		</script>
 	</body>
 </html>
