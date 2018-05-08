@@ -5,11 +5,14 @@ if(document.getElementById("simpleGame")){
 	}
 }
 	
-//设置页面(点击去发牌)
-if(document.getElementById("deal")){
-	var deal = document.getElementById("deal");
-	//点击发牌按钮
-	deal.onclick = function(){
+var randomAllPlayers = [];
+var allPlayers = [];
+//点击设置，分配角色比例
+if(document.getElementById("setpage-matching_edit")){
+	var setpage_matching_players_ul = document.getElementById("setpage-matching_players_ul");
+	var setpage_matching_edit = document.getElementById("setpage-matching_edit");
+	setpage_matching_edit.onclick = function(){
+		randomAllPlayers = [];
 		var playerNum = document.getElementById("playerNum").value;
 		var rangeNumDom = document.getElementById("rangeNum");
 		var civilian,killer;
@@ -20,19 +23,15 @@ if(document.getElementById("deal")){
 		}else if(playerNum>=4 && playerNum<=8){
 			killer = 1;
 			civilian = playerNum - killer;
-			window.location.href = "翻牌.html";
 		}else if(playerNum>=9 && playerNum<=11){
 			killer = 2;
 			civilian = playerNum - killer;
-			window.location.href = "翻牌.html";
 		}else if(playerNum>=12 && playerNum<=15){
 			killer = 3;
 			civilian = playerNum - killer;
-			window.location.href = "翻牌.html";
 		}else if(playerNum>=16 && playerNum<=18){
 			killer = 4;
 			civilian = playerNum - killer;
-			window.location.href = "翻牌.html";
 		}else{
 			alert("游戏人数超出！");
 		}
@@ -47,7 +46,39 @@ if(document.getElementById("deal")){
 		}
 		
 		//对所有玩家进行乱序
-		var randomAllPlayers = shuffle(allplayers);
+//		randomAllPlayers = shuffle(allplayers);
+		
+		var txt = "";
+		for(var i = 0;i < allplayers.length;i++){
+			
+			if(allplayers[i] == "civilian"){
+				txt += "<li class='col1'>平民1人</li>";
+			}
+			if(allplayers[i] == "killer"){
+				txt += "<li class='col2'>杀手1人</li>";
+			}
+		}
+		setpage_matching_players_ul.innerHTML = txt;
+		allPlayers = allplayers;
+		return false;
+	}
+}
+
+
+//设置页面(点击去发牌)
+if(document.getElementById("deal")){
+	var deal = document.getElementById("deal");
+	//点击发牌按钮
+	deal.onclick = function(){
+		//对所有玩家进行乱序
+		var randomAllPlayers = shuffle(allPlayers);
+		console.log(randomAllPlayers);
+		if(randomAllPlayers.length == 0){
+			alert("还未分配玩家！");
+		}else if(randomAllPlayers.length > 0){
+			alert(randomAllPlayers);
+			window.location.href = "翻牌.html";
+		}
 	}
 }
 
@@ -100,5 +131,19 @@ if(document.getElementById("rangeNum")){
 	//输入框人数动态改变滑动杆的值
 	function numChange(){
 		rangeNum.value = playerNum.value;
+	}
+}
+
+//左侧菜单栏弹出与缩回
+if(document.getElementById("header-menu")){
+	var headerMenu = document.getElementById("header-menu");
+	var sideMenu = document.getElementById("side-menu");
+	var layout = document.getElementById("layout");
+	
+	headerMenu.onclick = function(){
+		layout.classList.toggle("on");
+		sideMenu.classList.toggle("on");
+
+		return false;
 	}
 }

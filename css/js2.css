@@ -1,6 +1,12 @@
 .layout-index{
+	position: relative;
 	background-color: #f0f0f0;
 	padding-bottom: 60px;
+	transition: all .3s;
+}
+.layout-index.on{
+	padding-left: 492px;
+	margin-right: -492px;
 }
 header{
 	position: relative;
@@ -103,8 +109,51 @@ header{
 	width: 28px;
 	height: 56px;
 	background: url(../imgs/zys3.png) no-repeat center;
+	background-size: 28px 56px;
 }
-
+.side-menu{
+	/*display: none;*/
+	position: absolute;
+	left: -492px;
+	top: 0;
+	bottom: 0;
+	width: 492px;
+	background-color: #fff;
+	transition: all .3s;
+}
+.side-menu.on{
+	display: block;
+	left: 0;
+}
+.side-menu li{
+	height: 80px;
+	line-height: 80px;
+	border-bottom: 1px solid #d6d6d6;
+}
+.side-menu a{
+	display: block;
+	height: 80px;
+	background: url(../imgs/zys17.png) no-repeat right 50px center;
+	background-size: 24px 40px;
+}
+.side-menu label{
+	padding-left: 105px;
+	font-size: 30px;
+	color: #29bde0;
+	background-size: 40px;
+}
+.side-menu .gg label{
+	background: url(../imgs/zys13.png) no-repeat 34px center;
+}
+.side-menu .sz label{
+	background: url(../imgs/zys14.png) no-repeat 34px center;
+}
+.side-menu .bz label{
+	background: url(../imgs/zys15.png) no-repeat 34px center;
+}
+.side-menu .gy label{
+	background: url(../imgs/zys16.png) no-repeat 34px center;
+}
 /*index开始*/
 
 /*.layout-index{
@@ -230,7 +279,6 @@ header{
 	width: ;
 	height: 68px;
 	width: 65px;
-
 }
 .header-return a{
 	display: block;
@@ -318,6 +366,8 @@ header h2{
 }
 .setpage-matching_players{
 	padding-bottom: 13px;
+	height: 378px;
+	overflow-y: auto;
 }
 
 .setpage-matching_edit{
@@ -486,3 +536,21 @@ header h2{
 	background-color: #fbb435;
 }
 /*翻牌 结束*/
+
+/*翻牌杀手 开始*/
+.draw-card_img2{
+	margin: 0 auto;
+	width: 452px;
+	height: 644px;
+	border: 6px solid #fff;
+	background-color: #ffedc5;
+}
+.draw-card_img2 img{
+	margin-top: 58px;
+}
+.draw-card_img2 h4{
+	font-size: 40px;
+	color: #29bde0;
+}
+/*翻牌杀手 结束*/
+

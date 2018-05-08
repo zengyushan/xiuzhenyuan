@@ -26,8 +26,8 @@
 					</div>
 					<div class="setpage-matching_setting">
 						<div class="setpage-matching_players">
-							<ul>
-								<li class="col1">杀   手 1 人</li>
+							<ul id="setpage-matching_players_ul">
+								<!--<li class="col1">杀   手 1 人</li>
 								<li class="col1">杀   手 1 人</li>
 								<li class="col2">医   生 1 人</li>
 								<li class="col2">医   生 1 人</li>
@@ -36,11 +36,11 @@
 								<li class="col2">警   察 1 人</li>
 								<li class="col2">警   察 1 人</li>
 								<li class="col1">警   察 1 人</li>
-								<li class="col1">警   察 1 人</li>
+								<li class="col1">警   察 1 人</li>-->
 							</ul>
 						</div>
 						<div class="setpage-matching_edit">
-							<a href="#"><span>点击设置</span></a>
+							<a href="#" id="setpage-matching_edit"><span>点击设置</span></a>
 						</div>
 					</div>
 				</div>
@@ -52,7 +52,7 @@
 				</div>
 				<div class="setpage-num">
 					<div class="setpage-num_txt">
-						<h4>玩家人数 <input type="number" name="" id="playerNum" value="4" oninput="numChange()"/>人</h4>
+						<h4>玩家人数 <input type="number" name="" id="playerNum" value="4" onblur="numChange()"/>人</h4>
 					</div>
 					<div class="setpage-num_input">
 						<a href="#" class="setpage-num_left" id="setpage-num_left"></a>
@@ -66,6 +66,7 @@
 			</div>
 			</form>
 		</div>
+		<script src="../js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js2.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>
