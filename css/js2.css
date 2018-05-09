@@ -554,3 +554,64 @@ header h2{
 }
 /*翻牌杀手 结束*/
 
+/*法官查看 开始*/
+.layout-judgecheck{
+	background-color: #46c4e4;
+}
+.judgecheck{
+	padding: 64px 45px 200px;
+}
+.judgecheck ul{
+	overflow: hidden;
+	/*display: flex;
+	display: -webkit-flex;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;*/
+}
+.judgecheck li{
+	float: left;
+	width: 33.33%;
+	margin-bottom: 74px;
+}
+.judgecheck .judgecheck-box{
+	margin: 0 auto;
+	width: 126px;
+	/*height: 126px;*/
+	border: 5px solid #fff;
+}
+.judgecheck-identity{
+	height: 98px;
+	line-height: 98px;
+	text-align: center;
+	font-size: 30px;
+	background-color: #f4d085;
+}
+.judgecheck li h4{
+	height: 28px;
+	line-height: 28px;
+	font-size: 22px;
+	text-align: center;
+	color: #fff;
+	background-color: #92b7a5;
+}
+.judgecheck-btn{
+	position: fixed;
+	padding-top: 50px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 147px;
+	border-top: 1px solid #fff;
+	background-color: #29bde0;
+}
+.judgecheck-btn a{
+	display: block;
+	margin: 0 84px;
+	height: 86px;
+	line-height: 86px;
+	text-align: center;
+	font-size: 40px;
+	color: #fff;
+	background-color: #fbb435;
+}
+/*法官查看 结束*/

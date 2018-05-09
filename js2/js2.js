@@ -1,3 +1,7 @@
+$(function(){
+	$(".layout").css("min-height",$(window).height());
+})
+
 //首页(点击选择简化版)
 if(document.getElementById("simpleGame")){
 	document.getElementById("simpleGame").onclick = function(){
@@ -71,22 +75,7 @@ if(document.getElementById("deal")){
 	var deal = document.getElementById("deal");
 	//点击发牌按钮
 	deal.onclick = function(){
-		//对所有玩家进行乱序
-//		var randomAllPlayers = shuffle(allPlayers);
-		
-//		var txt = "";
-//		for(var i = 0;i < randomAllPlayers.length;i++){
-//			
-//			if(randomAllPlayers[i] == "civilian"){
-//				txt += "<li class='col1'>平民1人</li>";
-//			}
-//			if(randomAllPlayers[i] == "killer"){
-//				txt += "<li class='col2'>杀手1人</li>";
-//			}
-//		}
-//		
-//		setpage_matching_players_ul.innerHTML = txt;
-//		console.log(randomAllPlayers);
+
 		if(allPlayers.length == 0){
 			alert("还未分配玩家！");
 		}else if(allPlayers.length > 0){
