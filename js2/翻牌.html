@@ -20,13 +20,21 @@
 			</header>
 			<div class="draw">
 				<div class="draw-card">
-					<div class="draw-card_img">
+					<div class="draw-card_img draw-card_imgs" id="card0">
 						<img src="../imgs/zys10.jpg"/>
+					</div>
+					<div class="draw-card_img2 draw-card_imgs" id="cardCivilian" style="display: none;">
+						<img src="../imgs/zys18.png"/>
+						<h4>平民</h4>
+					</div>
+					<div class="draw-card_img2 draw-card_imgs" id="cardKiller" style="display: none;">
+						<img src="../imgs/zys18.png"/>
+						<h4>杀手</h4>
 					</div>
 					<span id="identityNum"></span>
 				</div>
 				<div class="draw-btn">
-					<a href="#">查看<font id="checkIdentityNum"></font>号身份</a>
+					<a href="#" id="checkIdentityNum">查看号身份</a>
 				</div>
 			</div>
 		</div>
@@ -34,33 +42,121 @@
 		<script src="js2.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			$(function(){
-//				sessionStorage.setItem()
+				var randomAllPlayers = sessionStorage.getItem("randomAllPlayers").split(",");
+				var passAllPlayers = sessionStorage.getItem("randomAllPlayers").split(",");
+
+				var playerNum = sessionStorage.getItem("pNum");
+				var pNum  = playerNum;
+				console.log(randomAllPlayers);
+				if(pNum == 1){
+					$("#identityNum").text(pNum);
+					$("#checkIdentityNum").html("查看"+pNum+"号身份");
+				}
+
+
+				//删除掉数组的第一项并返回数组
+				function playersArray(arr){
+					var m = arr.slice(0);
+					m.shift();
+					return m;
+				}
 				
+				//显示当前第几号
+				function showThisNum(currentNum){
+					$("#identityNum").text(currentNum);
+				}
 				
-				var pIdentity = "";
-				//点击发牌后，在身份页面获取js传递过来的身份信息
-				if(getUrl("randomAllPlayers") != null){
-					var passRandomAllPlayers = getUrl("randomAllPlayers").split(",");
-					if(getUrl("pNum")){
-						//将获取的当前序号显示在页面上
-						$("#identityNum").text(getUrl("pNum"));
-						$("#checkIdentityNum").text(getUrl("pNum"));
-						//当前是杀手还是平民
-						pIdentity = passRandomAllPlayers[parseInt(getUrl("pNum"))-1];
-					}
-//					console.log(passRandomAllPlayers[0]);
-				}	
-				
-				//查看身份
-				$(".draw-btn a").on("click",function(){
-					if(pIdentity == "civilian"){
-						window.location.href = "翻牌平民.html"+"?"+"randomAllPlayers="+passRandomAllPlayers+"&pNum="+getUrl("pNum");
-						console.log();
+				//显示按钮文本
+				function showBtnTxt(pNumTxt){
+					if($("#card0").css("display") != "none"){
+						$("#checkIdentityNum").text("查看"+pNumTxt+"号身份");
 					}else{
-						window.location.href = "翻牌杀手.html"+"?"+"randomAllPlayers="+passRandomAllPlayers+"&pNum="+getUrl("pNum");
+						$("#checkIdentityNum").text("隐藏并传递给"+(parseInt(pNumTxt)+1)+"号");
 					}
 					
+				}
+				
+				//点击按钮
+				$("#checkIdentityNum").on("click",function(){
+					if($("#checkIdentityNum").text() == "法官查看"){
+						window.location.href = "法官查看.html";
+					}
+					
+					//如果当前显示card0
+					if($("#card0").css("display") != "none"){
+						$("#card0").hide();
+						//如果下一个时civilian
+						if(randomAllPlayers[0] == "civilian"){
+							$("#cardCivilian").show();
+							showThisNum(pNum);
+							showBtnTxt(pNum);
+						}else{
+							$("#cardKiller").show();
+							showThisNum(pNum);
+							showBtnTxt(pNum);
+						}
+						
+						//删掉玩家数组的第一个
+						randomAllPlayers = playersArray(randomAllPlayers);
+					}else{
+						pNum = parseInt(pNum)+1;
+						//如果当前显示的是平民
+						if($("#cardCivilian").css("display") != "none"){
+							$("#cardCivilian").hide();
+							$("#card0").show();
+							showThisNum(pNum);
+							showBtnTxt(pNum);
+						}else{
+							$("#cardKiller").hide();
+							$("#card0").show();
+							showThisNum(pNum);
+							showBtnTxt(pNum);
+						}
+					}
+					console.log($("#checkIdentityNum").text()+"========"+randomAllPlayers +"=====pNum:"+pNum);
+					
+					//如果当前显示最后一号 && 当前显示翻牌.html
+					if(passAllPlayers.length == pNum && $("#card0").css("display") == "none"){
+						$("#checkIdentityNum").text("法官查看");
+					}
+					
+					
+					return false;
 				})
+//				function changeIdent(){
+//					
+//					if($(".draw-card_imgs").eq(0).is(":hidden")){
+//						pNum = sessionStorage.getItem("pNum");
+//						$("#identityNum").text(pNum);
+//						$(".draw-card_imgs").eq(0).show().siblings(".draw-card_imgs").hide();
+//						$("#checkIdentityNum").html("查看"+pNum+"号身份");
+//						console.log("翻页.html"+pNum);
+//					}else if(randomAllPlayers[pNum-1] == "civilian"){
+//						console.log("randomAllPlayers[pNum-1]=civilian----"+randomAllPlayers[pNum-1]);
+//						$("#identityNum").text(pNum);
+//						$(".draw-card_imgs").eq(1).show().siblings(".draw-card_imgs").hide();
+//						$("#checkIdentityNum").html("隐藏并传递给"+(parseInt(pNum)+1)+"号");
+//						sessionStorage.setItem("pNum",parseInt(pNum)+1);
+//					}else if(randomAllPlayers[pNum-1] == "killer"){
+//						console.log("killer");
+//						$("#identityNum").text(pNum);
+//						$(".draw-card_imgs").eq(2).show().siblings(".draw-card_imgs").hide();
+//						$("#checkIdentityNum").html("隐藏并传递给"+(parseInt(pNum)+1)+"号");
+//						sessionStorage.setItem("pNum",parseInt(pNum)+1);
+//					}
+//				}
+//				
+//				
+//				
+//				$("#checkIdentityNum").on("click",function(){
+//					
+////					console.log(randomAllPlayers[pNum-1]);
+//					randomAllPlayers = playersArray(randomAllPlayers);
+////					sessionStorage.setItem("pNum",parseInt(pNum));
+//					changeIdent();
+//					return false;
+//				})
+
 			})
 		</script>
 	</body>

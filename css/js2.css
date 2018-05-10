@@ -615,3 +615,295 @@ header h2{
 	background-color: #fbb435;
 }
 /*法官查看 结束*/
+
+/*法官台本 开始*/
+.layout-stage{
+	background-color: #f3f3f3;
+}
+.stage{
+	margin: 35px 10px 0;
+	padding-bottom: 130px;
+}
+.stage-head{
+	height: 84px;
+	line-height: 84px;
+	text-align: center;
+	color: #29bde0;
+	font-size: 30px;
+	border: 1px solid #c9c9c9;
+	background: url(../imgs/zys19.png) no-repeat right 18px center #fff;
+	background-size: 30px 17px;
+}
+.stage-body{
+	position: relative;
+	margin-top: 13px;
+	border: 1px solid #c9c9c9;
+	background-color: #fff;
+}
+.stage-body:after{
+	content: "";
+	position: absolute;
+	left: 50%;
+	margin-left: -17px;
+	top: -14px;
+	width: 34px;
+	height: 14px;
+	background: url(../imgs/zys23.png) no-repeat center;
+}
+.stage-body_left{
+	position: absolute;
+	left: 0;
+	width: 130px;
+	height: 100%;
+}
+.stage-body_left:after{
+	content: "";
+	position: absolute;
+	left: 50px;
+	width: 2px;
+	top: 50px;
+	bottom: 38px;
+	background-color: #c9c9c9;
+}
+
+.stage-body_right{
+	padding-top: 50px;
+	padding-bottom: 18px;
+	margin-left: 130px;
+	margin-right: 20px;
+}
+.stage-body_right li{
+	position: relative;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.stage-body_right li a{
+	position: relative;
+	display: block;
+	line-height: 75px;
+	height: 75px;
+	background-color: #24a7c6;
+	color: #fff;
+	font-size: 30px;
+}
+.stage-body_right li a:after{
+	content: "";
+	position: absolute;
+	left: -16px;
+	top: 50%;
+	margin-top: -11px;
+	width: 16px;
+	height: 22px;
+	background: url(../imgs/zys22.png) no-repeat center;
+}
+.stage-body_right h4{
+	font-size: 24px;
+	height: 30px;
+	line-height: 48px;
+}
+.stage-body_right .sssr:before{
+	content: "";
+	position: absolute;
+	top: 7px;
+	left: -110px;
+	z-index: 1;
+	width: 56px;
+	height: 56px;
+	border: 2px solid #c9c9c9;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius:100%;
+	background: url(../imgs/zys20.png) no-repeat center #fff;
+}
+.stage-body_right .wlfb:before{
+	content: "";
+	position: absolute;
+	top: 7px;
+	left: -110px;
+	z-index: 1;
+	width: 56px;
+	height: 56px;
+	border: 2px solid #c9c9c9;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius:100%;
+	background: url(../imgs/zys21.png) no-repeat center #fff;
+}
+.stage-btns{
+	position: fixed;
+	z-index: 1;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100px;
+	padding-top: 30px;
+	background-color: rgba(41,189,224,.5);
+}
+.stage-btns ul{
+	margin: 0 40px;
+	display: flex;
+	justify-content: space-between;
+}
+.stage-btns li {
+	display: inline;
+}
+.stage-btns li a{
+	padding: 0 10px;
+	display: block;
+	height: 60px;
+	line-height: 60px;
+	font-size: 30px;
+	color: #fff;
+	background-color: #fbb435;
+}
+/*法官台本 结束*/
+
+/*投票 开始*/
+.vote{
+	padding-bottom: 200px;
+}
+.vote-list{
+	padding-top: 90px;
+}
+.layout-vote{
+	background-color: #29bde0;
+}
+.vote-txt{
+	position: relative;
+}
+.vote-txt h4{
+	position: relative;
+	height: 82px;
+	line-height: 82px;
+	padding-left: 46px;
+	font-size: 26px;
+	color: #464646;
+	background-color: #b9e9f5;
+}
+.vote-txt h4:after{
+	content: "";
+	position: absolute;
+	bottom: -13px;
+	left: 70px;
+	width: 15px;
+	height: 13px;
+	background: url(../imgs/zys24.png) no-repeat center;
+}
+.vote-txt_hint{
+	position: absolute;
+	left: 72px;
+	bottom: -50px;
+	font-size: 24px;
+	color: #fff;
+}
+.vote-list ul{
+	overflow: hidden;
+}
+.vote-list li{
+	float: left;
+	width: 33.33%;
+	height: 221px;
+}
+.vote-list_box{
+	margin: 0 auto;
+	width: 126px;
+	height: 126px;
+	text-align: center;
+	border: 5px solid #fff;
+}
+.vote-list_identity{
+	font-size: 30px;
+	color: #565656;
+	height: 100px;
+	line-height: 100px;
+	background-color: #f5c97b;
+}
+.vote-list_box h4{
+	font-size: 22px;
+	color: #fff;
+	background-color: #83b09a;
+}
+.vote-list_kill{
+	/*display: none;*/
+	padding: 20px 0;
+	line-height: 0;
+	text-align: center;
+}
+.vote-list_kill em{
+	display: inline-block;
+	width: 45px;
+	height: 45px;
+	background: url(../imgs/zys24.jpg) no-repeat center;
+	background-size: cover;
+}
+.vote-btn{
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding-top: 40px;
+	height: 150px;
+	border-top: 1px solid #fff;
+	background-color: #29bde0;
+}
+.vote-btn a{
+	display: block;
+	margin: 0 78px;
+	height: 87px;
+	line-height: 87px;
+	text-align: center;
+	color: #fff;
+	font-size: 40px;
+	background-color: #fbb435;
+}
+/*投票 结束*/
+
+/*结果页 开始*/
+.layout-result{
+	background-color: #29bde0;
+}
+.header-main{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.header-main a{
+	display: inline-block;
+	height: 68px;
+	width: 92px;
+	background: url(../imgs/zys25.png) no-repeat center;
+	background-size: 51px 42px;
+}
+.result-txt_win{
+	margin: 23px auto 0;
+	width: 351px;
+	height: 205px;
+	text-align: center;
+	background: url(../imgs/zys26.png) no-repeat center;
+}
+.result-txt_win h4{
+	padding-top: 130px;
+	font-size: 48px;
+	color: #fff;
+}
+.result-txt_lastpalyers{
+	margin: 0 80px;
+}
+.result-txt_lastpalyers dl{
+	overflow: hidden;
+}
+.result-txt_lastpalyers dt{
+	font-size: 26px;
+	color: #fff;
+}
+.result-txt_lastpalyers dd{
+	float: left;
+	margin-right: 20px;
+	font-size: 26px;
+	color: #fff;
+}
+.result-detail{
+	background-color: #fff;
+}
+/*结果页 结束*/

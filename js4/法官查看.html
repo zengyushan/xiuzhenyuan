@@ -63,7 +63,7 @@
 		<script type="text/javascript">
 			$(function(){
 				//接收传递过来的配比数组
-				var passRandomAllPlayers = sessionStorage.getItem("randomAllPlayers").split(",");
+				var passRandomAllPlayers = sessionStorage.getItem("passRandomAllPlayers").split(",");
 				var txt = "";
 				for(var i=0;i<passRandomAllPlayers.length;i++){
 					if(passRandomAllPlayers[i] == "civilian"){
@@ -73,7 +73,11 @@
 					}
 				}
 				$(".judgecheck ul").html(txt);
-				console.log(passRandomAllPlayers);
+				
+				$(".judgecheck-btn a").on("click",function(){
+					window.location.href = "法官台本.html";
+					return false;
+				})
 			})
 		</script>
 	</body>
