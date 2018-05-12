@@ -861,7 +861,7 @@ header h2{
 
 /*结果页 开始*/
 .layout-result{
-	background-color: #29bde0;
+	background-color: #fff;
 }
 .header-main{
 	position: absolute;
@@ -875,8 +875,14 @@ header h2{
 	background: url(../imgs/zys25.png) no-repeat center;
 	background-size: 51px 42px;
 }
+.result-txt{
+	padding-top: 23px;
+	padding-bottom: 20px;
+	background-color: #29bde0;
+}
 .result-txt_win{
-	margin: 23px auto 0;
+
+	margin: 0 auto;
 	width: 351px;
 	height: 205px;
 	text-align: center;
@@ -888,7 +894,7 @@ header h2{
 	color: #fff;
 }
 .result-txt_lastpalyers{
-	margin: 0 80px;
+	margin: 60px 80px 0;
 }
 .result-txt_lastpalyers dl{
 	overflow: hidden;
@@ -905,5 +911,45 @@ header h2{
 }
 .result-detail{
 	background-color: #fff;
+}
+.result-detail li{
+	position: relative;
+	padding: 4px 80px 30px;
+	border-bottom: 1px solid #dddddd;
+}
+.result-detail dt{
+	font-size: 30px;
+	color: #515151;
+}
+.result-detail dd{
+	font-size: 26px;
+	color: #a6a6a6;
+}
+.result-detail span{
+	position: absolute;
+	top: 8px;
+	right: 80px;
+	font-size: 20px;
+	color: #c7c7c7;
+}
+.result-btn{
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding-top: 20px;
+	height: 110px;
+	text-align: center;
+	background-color: #29bde0;
+}
+.result-btn a{
+	display: inline-block;
+	width: 270px;
+	height: 87px;
+	line-height: 87px;
+	text-align: center;
+	background-color: #f66f6f;
+	font-size: 40px;
+	color: #fff;
 }
 /*结果页 结束*/
