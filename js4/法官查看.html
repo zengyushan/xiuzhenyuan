@@ -59,26 +59,8 @@
 			</div>
 		</div>
 		<script src="../js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/state-machine.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js2.js" type="text/javascript" charset="utf-8"></script>
-		<script type="text/javascript">
-			$(function(){
-				//接收传递过来的配比数组
-				var passRandomAllPlayers = sessionStorage.getItem("passRandomAllPlayers").split(",");
-				var txt = "";
-				for(var i=0;i<passRandomAllPlayers.length;i++){
-					if(passRandomAllPlayers[i] == "civilian"){
-						txt += "<li><div class='judgecheck-box'><div class='judgecheck-identity'>平民</div><h4>"+(i+1)+"号</h4></div></li>";
-					}else{
-						txt += "<li><div class='judgecheck-box'><div class='judgecheck-identity'>杀手</div><h4>"+(i+1)+"号</h4></div></li>";
-					}
-				}
-				$(".judgecheck ul").html(txt);
-				
-				$(".judgecheck-btn a").on("click",function(){
-					window.location.href = "法官台本.html";
-					return false;
-				})
-			})
-		</script>
+		<script src="judgeCheckJs4.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>

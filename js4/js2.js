@@ -79,9 +79,10 @@ if(document.getElementById("deal")){
 		if(allPlayers.length == 0){
 			alert("还未分配玩家！");
 		}else if(allPlayers.length > 0){
-//			alert("玩家配比处已随机分配！");
-//			setTimeout("window.location.href='翻牌.html?randomAllPlayers="+randomAllPlayers+"&pNum="+1+"'",3000);
-			window.location.href = "翻牌.html"+"?"+"randomAllPlayers="+allPlayers+"&pNum="+1;
+			sessionStorage.setItem("randomAllPlayers",allPlayers);
+			sessionStorage.setItem("pNum",1);
+			window.location.href = "翻牌.html";
+//			window.location.href = "翻牌.html"+"?"+"randomAllPlayers="+allPlayers+"&pNum="+1;
 		}
 	}
 }

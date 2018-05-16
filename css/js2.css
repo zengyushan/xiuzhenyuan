@@ -291,6 +291,7 @@ header h2{
 	font-size: 34px;
 	color: #fff;
 	line-height: 68px;
+	margin: 0;
 }
 .setpage-matching{
 	height: 452px;
@@ -634,6 +635,9 @@ header h2{
 	background: url(../imgs/zys19.png) no-repeat right 18px center #fff;
 	background-size: 30px 17px;
 }
+.stage li{
+	margin-bottom: 10px;
+}
 .stage-body{
 	position: relative;
 	margin-top: 13px;
@@ -687,6 +691,9 @@ header h2{
 	color: #fff;
 	font-size: 30px;
 }
+.stage-body_right li.already a{
+	background-color: #0878a3;
+}
 .stage-body_right li a:after{
 	content: "";
 	position: absolute;
@@ -697,7 +704,11 @@ header h2{
 	height: 22px;
 	background: url(../imgs/zys22.png) no-repeat center;
 }
+.stage-body_right li.already a:after{
+	background: url(../imgs/zys27.png) no-repeat center;
+}
 .stage-body_right h4{
+	display: none;
 	font-size: 24px;
 	height: 30px;
 	line-height: 48px;
@@ -831,11 +842,17 @@ header h2{
 	text-align: center;
 }
 .vote-list_kill em{
-	display: inline-block;
+	display: none;
 	width: 45px;
 	height: 45px;
 	background: url(../imgs/zys24.jpg) no-repeat center;
 	background-size: cover;
+}
+.vote-list li.on em{
+	display: inline-block;
+}
+.vote-list li.dead .vote-list_identity{
+	background-color: #83b09a;
 }
 .vote-btn{
 	position: fixed;
@@ -874,6 +891,9 @@ header h2{
 	width: 92px;
 	background: url(../imgs/zys25.png) no-repeat center;
 	background-size: 51px 42px;
+}
+.result{
+	padding-bottom: 130px;
 }
 .result-txt{
 	padding-top: 23px;
@@ -953,3 +973,25 @@ header h2{
 	color: #fff;
 }
 /*结果页 结束*/
+
+/*自定义bootbox弹出框 开始*/
+.my-modal .modal-dialog{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -57px;
+	margin-left: -114px;
+	width: 228px;
+}
+.my-modal .modal-footer{
+	text-align: center;
+}
+.my-modal .modal-footer button{
+	background-color: #e5e5e5;
+	color: #000;
+	border-color: #ccc;
+}
+.my-modal .modal-body{
+	text-align: center;
+}
+/*自定义bootbox弹出框 结束*/
