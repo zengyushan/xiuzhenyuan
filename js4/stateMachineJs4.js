@@ -11,7 +11,7 @@ $(function(){
 //			onStep1:function() { console.log('I melted') },
 		}
 	});
-
+	
 	//=杀手杀人
 	var prevTxt = decodeURI(document.referrer).split("js4/")[1].split(".html")[0];
 	console.log(prevTxt);

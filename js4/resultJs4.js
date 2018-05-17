@@ -36,7 +36,6 @@ $(function(){
 		if(i%2 == 0){
 			ddTxtDay += "<dd>晚上："+ (parseInt(deadArr[i])+1) +"号被杀手杀死，"+(parseInt(deadArr[i])+1)+"号是"+deadIdents[i]+"</dd>";
 			ddTxtNight = "";
-//			console.log(ddTxtDay);
 			tempDD += ddTxtDay;
 			//如果晚上过后游戏结束了
 			if(i == deadArr.length - 1){
@@ -47,7 +46,6 @@ $(function(){
 		if(i%2 == 1){
 			ddTxtNight += "<dd>白天："+ (parseInt(deadArr[i])+1) +"号被全民投票投死，"+ (parseInt(deadArr[i])+1) +"号是"+deadIdents[i]+"</dd>";
 			ddTxtDay = "";
-//			console.log(ddTxtNight);
 			tempDD += ddTxtNight;
 		}
 		
@@ -75,6 +73,7 @@ $(function(){
 		sessionStorage.removeItem("deadArr");
 		sessionStorage.removeItem("deadIdent");
 		sessionStorage.removeItem("pNum");
+		sessionStorage.removeItem("tempState");
 		sessionStorage.removeItem("randomAllPlayers");
 		
 		window.location.href = "设置页面.html";

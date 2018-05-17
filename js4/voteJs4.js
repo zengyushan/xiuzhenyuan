@@ -56,6 +56,8 @@ $(function(){
 
 			sessionStorage.setItem("dateNum",parseInt(sessionStorage.getItem("dateNum"))+1);	
 			
+			sessionStorage.removeItem("tempState");
+			
 			window.location.href = "法官台本.html";
 		}
 	})
