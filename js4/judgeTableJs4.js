@@ -28,11 +28,12 @@ $(function(){
 	//重写li列表
 	var tableLiTxt = "";
 	for(var i=0;i<=lastDay;i++){
-		tableLiTxt += '<li><div class="stage-head">第'+(i+1)+'天</div><div class="stage-body"><div class="stage-body_left"></div><div class="stage-body_right"><ul><li class="sssr"><a href="#">杀手杀人</a><h4>3号被杀手杀死，真实身份是平民</h4></li><li class="wlfb"><a href="#">亡灵发表遗言</a></li><li class="wjdy"><a href="#">玩家依次发言</a></li><li class="qmtp"><a href="#">全名投票</a></li></ul></div></div></li>';
+		tableLiTxt += '<li><div class="stage-head">第'+(i+1)+'天</div><div class="stage-body"><div class="stage-body_left"></div><div class="stage-body_right"><ul><li class="sssr already"><a href="#">杀手杀人</a><h4>3号被杀手杀死，真实身份是平民</h4></li><li class="wlfb already"><a href="#">亡灵发表遗言</a></li><li class="wjdy already"><a href="#">玩家依次发言</a></li><li class="qmtp already"><a href="#">全名投票</a></li></ul></div></div></li>';
 	}
-	$(".stage ul").html(tableLiTxt);
-	$(".stage .stage-body").hide();
-	$(".stage li:last-child").find(".stage-body").show();
+	$(".stage > ul").html(tableLiTxt);
+	$(".stage >ul > li .stage-body").hide();
+	$(".stage >ul > li:last-child").find(".stage-body").show();
+	$(".stage >ul > li:last-child .sssr,.stage >ul > li:last-child .wlfb,.stage >ul > li:last-child .wjdy,.stage >ul > li:last-child .qmtp").removeClass("already");
 	$(".stage-head").on("click",function(){
 		if($(this).parent().find(".stage-body").is(":visible")){
 			$(this).parent().find(".stage-body").slideUp();
