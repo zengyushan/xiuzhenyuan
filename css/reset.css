@@ -1,7 +1,10 @@
 /*@charset "gb2312";*/
 /**
- * 切图网专用reset文件: http://www.qietu.com
+ * reset文件
  html{-webkit-text-size-adjust:none; /*解决chrome浏览器下字体不能小于12px*/
+/*html,body{
+	height: 100%;
+}*/
  body{ color:#000000; font-family:Verdana, Arial, Helvetica, sans-serif;}
  * {}
 a{outline:none; text-decoration:none;} a:hover{ text-decoration:none;}

@@ -995,3 +995,88 @@ header h2{
 	text-align: center;
 }
 /*自定义bootbox弹出框 结束*/
+
+/*任务5 login.html 开始*/
+.login-bg{
+	height: 695px;
+	padding-top: 305px;
+	background: url(../imgs/zys28.jpg) no-repeat center top;
+}
+.login-window{
+	width: 538px;
+	height: 390px;
+	margin: 0 auto;
+	background-color: #d0d3d8;
+}
+.login-head{
+	padding-top: 23px;
+	padding-bottom: 25px;
+	text-align: center;
+}
+.login-head h2{
+	font-size: 30px;
+	color: #03a9f4;
+}
+.login-body li{
+	position: relative;
+	width: 436px;
+	height: 60px;
+	margin:0 auto 20px;
+	background-color: #fff;
+}
+.login-body label{
+	float: left;
+	position: relative;
+	display: inline-block;
+	width: 50px;
+	height: 60px;
+}
+.login-body label:after{
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 22px;
+	width: 1px;
+	height: 17px;
+	background-color: #e8e8e8;
+}
+
+.login-body li span{
+	display: none;
+	position: absolute;
+	left: 0;
+	bottom: -18px;
+	color: #ff3b07;
+}
+.login-body_img1{
+	background: url(../imgs/zys29.png) no-repeat center;
+}
+.login-body_img2{
+	background: url(../imgs/zys30.png) no-repeat center;
+}
+.login-body input{
+	float: left;
+	border: none;
+	height: 60px;
+	width: 386px;
+	font-size: 14px;
+	color: #999999;
+	text-indent: 20px;
+}
+.login-btn{
+	padding-top: 50px;
+	text-align: center;
+}
+.login-btn .submit{
+	width: 436px;
+	height: 60px;
+	color: #fff;
+	background-color: #03a9f4;
+	border: none;
+	font-size: 18px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius:3px;
+    cursor: pointer;
+}
+/*任务5 login.html 结束*/
