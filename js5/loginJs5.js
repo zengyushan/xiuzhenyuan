@@ -17,7 +17,7 @@ sbmt.onclick = function(){
 	pass = document.getElementById("pass").value;
 
 	var data = "name="+user+"&pwd="+pass;
-	xmlhttp.open("post","http://dev.admin.carrots.ptteng.com/carrots-admin-ajax/a/login",true);
+	xmlhttp.open("post","/carrots-admin-ajax/a/login",true);
 	xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 	
 	
