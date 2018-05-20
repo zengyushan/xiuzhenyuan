@@ -21,7 +21,7 @@ $(function(){
 		}else{
 			$.ajax({
 				type:"post",
-				url:"/carrots-admin-ajax/a/login",
+				url:"http://dev.admin.carrots.ptteng.com/carrots-admin-ajax/a/login",
 				async:true,
 				contentType:"application/x-www-form-urlencoded",
 				data:{"name":user,"pwd":pass},
