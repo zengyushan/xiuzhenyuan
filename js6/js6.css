@@ -1,0 +1,547 @@
+/* lbd_login开始 */
+.lbdbody{
+	background-color: #0878A3;
+}
+.lbdbg{
+	padding-top: 370px;
+}
+.lbdlogin{
+	margin: 0 auto;
+	width: 508px;
+	height: 336px;
+	border: 1px solid #333333;
+}
+.lbdlogin{
+	text-align: center;
+	background-color: #fff;
+}
+.lbdlogin-head{
+	padding-top: 43px;
+	padding-bottom: 30px;
+}
+.lbdlogin-head h2{
+	font-size: 30px;
+}
+.lbdlogin-input{
+	position: relative;
+}
+.lbdlogin-input li{
+	margin-bottom: 12px;
+}
+.lbdlogin-input input{
+	width: 292px;
+	height: 38px;
+	text-indent: 10px;
+}
+.lbdlogin-input h6{
+	position: absolute;
+	left: 117px;
+	color: #ff0000;
+}
+.lbdlogin-btn{
+	padding-top: 38px;
+}
+.lbdlogin-btn input{
+	width: 265px;
+	height: 38px;
+	cursor: pointer;
+	border: 1px solid #333333;
+	background-color: #f2f2f2;
+}
+
+/* lbd_login结束 */
+
+/* lbd_list 开始 */
+.listbody{
+	width: 1366px;
+	margin: 0 auto;
+}
+.lbdlist-header{
+	height: 78px;
+	background-color: #f2f2f2;
+}
+.lbdlist-header_logo{
+	float: left;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+.lbdlist-header_right{
+	float: right;
+	overflow: hidden;
+}
+.lbdlist-header_right a{
+	float: left;
+	font-size: 20px;
+	margin: 0 15px;
+	color: #333333;
+	line-height: 78px;
+}
+.lbdlist-header_right span{
+	float: left;
+	position: relative;
+	top: 5px;
+	margin-top: 20px;
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	background: url(../imgs/zys33.png) no-repeat center;
+	background-size: 28px;
+}
+.lbdlist-header_right font{
+	float: left;
+	line-height: 78px;
+}
+
+.lbdlist-body{
+	overflow: hidden;
+}
+.lbdlist-body_left{
+	float: left;
+	width: 200px;
+	border: 1px solid #333333;
+}
+.lbdlist-body_right{
+	/*float: right;*/
+	margin-left: 215px;
+}
+.lbdlist-body_lefttop{
+	height: 38px;
+	border-top: 1px solid #333333;
+	border-bottom: 1px solid #333333;
+	background: url(../imgs/zys37.png) no-repeat 170px center;
+}
+.lbdlist-body_lefttop label{
+	font-size: 18px;
+	padding-left: 40px;
+	line-height: 38px;
+	font-weight: bold;
+}
+.lbdlist-body_left .li1 label{
+	background: url(../imgs/zys35.png) no-repeat 9px center;
+	background-size: 24px;
+}
+.lbdlist-body_left .li2 label{
+	background: url(../imgs/zys36.png) no-repeat 9px center;
+	background-size: 24px;
+}
+.lbdlist-body_leftbottom{
+	background-color: #f2f2f2;
+}
+.lbdlist-body_leftbottom li a{
+	padding-left: 40px;
+	font-size: 18px;
+	color: #333;
+	line-height: 40px;
+}
+.lbdlist-body_right{
+	
+}
+.lbdlist-body_righttop{
+	position: relative;
+	margin-top: 12px;
+	border: 1px solid #333333;
+	background-color: #fcfcfc;
+	height: 107px;
+	padding-left: 30px;
+}
+.lbdlist-body_righttop .inputform ul{
+	overflow: hidden;
+}
+.lbdlist-body_righttop .inputform li{
+	float: left;
+	margin-top: 17px;
+}
+.lbdlist-body_righttop .li-creater{
+	margin-left: 38px;
+}
+.lbdlist-body_righttop .li-time{
+	margin-left: 66px;
+}
+.lbdlist-body_righttop .inputform label{
+	font-size: 16px;
+	margin-right: 5px;
+}
+.lbdlist-body_righttop .inputform input[type=text]{
+	width: 236px;
+	height: 23px;
+	
+}
+.lbdlist-body_righttop .li-creater input[type=text]{
+	width: 145px;
+}
+.lbdlist-body_righttop .li-time input[type=text]{
+	width: 158px;
+}
+.lbdlist-body_righttop .li-time .time1{
+	margin-right: 20px;
+}
+.lbdlist-body_righttop .li-time .time2{
+	margin-left: 20px;
+}
+.lbdlist-body_righttop .li-type{
+	margin-left: 130px;
+}
+.lbdlist-body_righttop li select{
+	width: 145px;
+	height: 23px;
+}
+.lbdlist-body_righttop .btns{
+	position: absolute;
+	bottom: 22px;
+	right: 113px;
+}
+.lbdlist-body_righttop .btns ul{
+	overflow: hidden;
+}
+.lbdlist-body_righttop .btns li{
+	float: left;
+	margin-left: 22px;
+}
+.lbdlist-body_righttop .btns input{
+	width: 60px;
+	height: 23px;
+	border: 1px solid #EEEEEE;
+	background-color: #fff;
+}
+.lbdlist-body_rightbottom{
+	margin-top: 12px;
+	border: 1px solid #333333;
+}
+.lbdlist-body_rightbottom .head{
+	height: 43px;
+	border-bottom: 1px solid #333333;
+}
+.lbdlist-body_rightbottom .head label{
+	float: left;
+	font-weight: bold;
+	margin-left: 26px;
+	line-height: 43px;
+}
+.lbdlist-body_rightbottom .head > ul{
+	float: right;
+	margin-top: 9px;
+	margin-right: 20px;
+}
+.lbdlist-body_rightbottom .head > ul > li {
+	float: left;
+	margin-left: 30px;
+}
+.lbdlist-body_rightbottom .head > ul > li a{
+	display: inline-block;
+	width: 74px;
+	height: 23px;
+	line-height: 23px;
+	text-align: center;
+	border: 1px solid #333333;
+	background-color: #f2f2f2;
+}
+.lbdlist-body_rightbottom .body{
+	margin: 5px 10px 0;
+}
+.lbdlist-body_rightbottom .body table{
+	width: 100%;
+	border-spacing: 0px 1px;
+	background-color: #333333;
+}
+.lbdlist-body_rightbottom .body tr{
+	border-bottom: 1px solid #333333;
+}
+.lbdlist-body_rightbottom .body td,
+.lbdlist-body_rightbottom .body th{
+	border: none;
+	background-color: #fff;
+	text-align: center;
+	height: 45px;
+}
+.lbdlist-body_rightbottom .body th{
+	background-color: #f2f2f2;
+	font-size: 18px;
+	color: #333333;
+	font-weight: bold;
+}
+.lbdlist-body_rightbottom .body td{
+	height: 118px;
+	font-size: 18px;
+}
+.lbdlist-body_rightbottom td li{
+	display: inline;
+}
+.lbdlist-body_rightbottom td li a{
+	display: inline-block;
+	width: 58px;
+	height: 23px;
+	font-size: 16px;
+	color: #333333;
+	border: 1px solid #333333;
+}
+.lbdlist-body_rightbottom td li.del a{
+	background-color: #f2f2f2;
+}
+/* lbd_list 结束 */
+
+/*lbd_add.html 开始*/
+.lbdadd-body_right{
+	margin-left: 215px;
+	border: 1px solid #333333;
+}
+.lbdadd-body_right .head{
+	height: 38px;
+	border-bottom: 1px solid #333333;
+}
+.lbdadd-body_right .head label{
+	margin-left: 30px;
+	font-size: 16px;
+
+	color: #333333;
+	line-height: 38px;
+	font-weight: bold;
+}
+.lbdadd-body_right .body {
+	padding-top: 70px;
+}
+.lbdadd-body_right .body > ul > li{
+	position: relative;
+	padding-left: 150px;
+	margin-bottom: 28px;
+}
+.lbdadd-body_right .body > ul > li label{
+	display: block;
+	line-height: 30px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	text-align: right;
+	font-size: 16px;
+	width: 145px;
+}
+.lbdadd-body_right .body > ul > li select{
+	width: 198px;
+	height: 28px;
+}
+.lbdadd-body_right .body > ul > li input[type=text]{
+	width: 848px;
+	height: 28px;
+}
+.lbdadd-body_right .body > ul > li .spanfile{
+	position: relative;
+	display: inline-block;
+	width: 118px;
+	height: 38px;	
+	line-height: 38px;
+	font-size: 14px;
+	text-align: center;
+	border: 1px solid #333333;
+
+}
+.lbdadd-body_right .body > ul > li input[type=file]{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	cursor: pointer;
+}
+.lbdadd-body_right .body > ul > li .img img{
+	width: 310px;
+	height: 83px;
+}
+.lbdadd-body_right .body > ul > li table{
+	width: 728px;
+
+}
+.lbdadd-body_right .body > ul > li th{
+	font-size: 16px;
+	background-color: #f2f2f2;
+	text-align: center;
+	height: 38px;
+}
+.lbdadd-body_right .body > ul > li td{
+	text-align: center;
+	font-size: 16px;
+	height: 38px;
+}
+.lbdadd-body_right .body > ul > li table span.bar{
+	position: relative;
+	margin-right: 5px;
+	display: inline-block;
+	width: 108px;
+	height: 14px;
+	border: 1px solid #333333;
+}
+.lbdadd-body_right .body > ul > li table em{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 14px;
+	background-color: #f2f2f2;
+}
+.lbdadd-body_right .body td li{
+	display: inline;
+}
+.lbdadd-body_right .body td li a{
+	display: inline-block;
+
+}
+.lbdadd-body_right .body .btns li{
+	display: inline;
+	margin-right: 20px;
+}
+.lbdadd-body_right .body .btns input[type=button]{
+	width: 98px;
+	height: 33px;
+	font-size: 14px;
+	cursor: pointer;
+	border: 1px solid #cccccc;
+	background-color: #f2f2f2;
+}
+.lbdadd-body_right .body .btns .close input[type=button]{
+	background-color: #fff;
+}
+/*lbd_add.html 结束*/
+
+/*lbd_personalinfo 开始*/
+.lbdpinfo-header_right{
+	float: right;
+	margin-right: 35px;
+}
+.lbdpinfo-header_right ul{
+	overflow: hidden;
+}
+.lbdpinfo-header_right li{
+	float: left;
+	margin-left: 20px;
+}
+.lbdpinfo-header_right li a{
+	font-size: 16px;
+	color: #333333;
+	line-height: 78px;
+	height: 78px;
+}
+.lbdpinfo-header_user a{
+	/*width: 25px;
+	height: 25px;*/
+	display: inline-block;
+	padding-left: 25px;
+	height: 25px;
+	background: url(../imgs/zys38.png) no-repeat left center;
+	background-size: 25px;
+}
+.lbdpinfo-header_logout{
+	margin-top: 24px;
+}
+.lbdpinfo-header_right .lbdpinfo-header_logout a{
+	display: inline-block;
+	width: 78px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius:3px;
+    border: 1px solid #333333;
+}
+.lbdpinfo-body{
+	margin-top: 10px;
+	overflow: hidden;
+}
+.lbdpinfo-body_left{
+	float: left;
+	width: 220px;
+	margin-left: 5px;
+	border: 1px solid #cccccc;
+	border-bottom: none;
+}
+.lbdpinfo-body_left li{
+	border-bottom: 1px solid #CCCCCC;
+}
+.lbdpinfo-body_left li a{
+	display: block;
+	font-size: 18px;
+	color: #333333;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	background-color: #f2f2f2;
+}
+.lbdpinfo-body_right{
+	margin-left: 230px;
+	border: 1px solid #333333;
+}
+.lbdpinfo-body_right .head{
+	height: 38px;
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #333333;
+}
+.lbdpinfo-body_right .head label{
+	font-size: 14px;
+	line-height: 38px;
+	margin-left: 24px;
+}
+.lbdpinfo-body_right .body{
+	padding-bottom: 100px;
+}
+.lbdpinfo-body_right .form {
+	padding-top: 37px;
+}
+.lbdpinfo-body_right .form li{
+	position: relative;
+	padding-left: 170px;
+	margin-bottom: 27px;
+}
+.lbdpinfo-body_right .form label{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 118px;
+	font-size: 14px;
+	line-height: 23px;
+	text-align: right;
+}
+.lbdpinfo-body_right .form input[type=text]{
+	width: 707px;
+	height: 23px;
+}
+.lbdpinfo-body_right .form li span.file{
+	position: relative;
+	display: inline-block;
+	width: 98px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	border: 1px solid #333333;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius:7px;
+    background-color: #f2f2f2;
+
+}
+.lbdpinfo-body_right .form li input[type=file]{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+    cursor: pointer;
+}
+.lbdpinfo-body_right .btns{
+	padding-left: 80px;
+}
+.lbdpinfo-body_right .btns ul{
+	overflow: hidden;
+}
+.lbdpinfo-body_right .btns li{
+	float: left;
+	margin-right: 45px;
+}
+.lbdpinfo-body_right .btns input{
+	width: 98px;
+	height: 33px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius:7px;	
+    border: none;
+	border: 1px solid #333333;
+}
+/*lbd_personalinfo 结束*/

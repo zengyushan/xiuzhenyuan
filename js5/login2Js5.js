@@ -26,6 +26,7 @@ $(function(){
 				contentType:"application/x-www-form-urlencoded",
 				data:{"name":user,"pwd":pass},
 				success:function(result){
+					alert(result);
 					if(JSON.parse(result).message == "success"){
 						window.location.href = "../js5/success.html";
 					}else if(JSON.parse(result).message == "用户不存在"){
