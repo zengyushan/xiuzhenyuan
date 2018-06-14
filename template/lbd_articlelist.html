@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../js6.css" />
+		<title>article列表页</title>
+	</head>
+
+	<body class="">
+		<div class="backstage">
+			<div class="bsheader">
+				<div class="bsheader-logo">
+					<h2>萝卜多后台管理系统</h2>
+				</div>
+				<div class="bsheader-manage">
+					<ul>
+						<li><a href="#">管理员</a></li>
+						<li><span>|</span></li>
+						<li><a href="#">admin</a></li>
+						<li><span>|</span></li>
+						<li class="logout"><a href="#"></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="bsbody">
+				<div class="bsbody-menu">
+					<ul>
+						<li>
+							<div class="main">
+								<a href="#">Article管理</a>
+							</div>
+							<ul>
+								<li><a href="#">Article列表</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="alistbody-content">
+					<div class="alistbody-content_param">
+						<form action="" method="post">
+							<div class="inputs">
+								<ul>
+									<li><label>发布时间</label><input type="text" class="date1" /> <span>-</span><input type="text" class="date2"/></li>
+									<li class="type">
+										<label>类型</label>
+										<select name="">
+											<option value="">全部</option>
+										</select>
+									</li>
+									<li>
+										<label>状态</label>
+										<select name="">
+											<option value="">全部</option>
+										</select>
+									</li>
+								</ul>
+							</div>
+							<div class="btns">
+								<input type="reset" value="清空" />
+								<input type="button" value="搜索" />
+							</div>
+						</form>
+					</div>
+					<div class="alistbody-content_result">
+						<div class="head">
+							<label>Article列表</label>
+							<a href="#">+新增</a>
+						</div>
+						<div class="body">
+							<table border="" cellspacing="" cellpadding="">
+								<tr>
+									<th>ID</th>
+									<th>名称</th>
+									<th>类型</th>
+									<th>发布时间</th>
+									<th>修改时间</th>
+									<th>发布者</th>
+									<th>状态</th>
+									<th>操作</th>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>12454454</td>
+									<td>首页Banner</td>
+									<td>2018-04-20 19:43:09</td>
+									<td>2018-05-23 11:53:48</td>
+									<td>admin</td>
+									<td>草稿</td>
+									<td>
+										<ul>
+											<li><a href="#">上线</a></li>
+											<li><a href="#">编辑</a></li>
+											<li><a href="#">删除</a></li>
+										</ul>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="pages">
+						<div class="nums-epage">
+							每页显示 <input type="number" name="" value="" />条
+						</div>
+						<ul>
+							<li><a href="#">首页</a></li>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li><a>...</a></li>
+							<li><a href="#">&gt;</a></li>
+							<li><a href="#">末页</a></li>
+						</ul>
+						<div class="to-page">
+							<form action="" method="post">
+								<span>去第<input type="number" name="" id="" value="" />页</span>
+								<input type="button" name="" id="" value="确定" />
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>
